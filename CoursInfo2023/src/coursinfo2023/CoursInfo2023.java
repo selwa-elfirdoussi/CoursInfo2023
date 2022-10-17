@@ -5,6 +5,9 @@
  */
 package coursinfo2023;
 
+import cours.classes.Client;
+import cours.classes.ClientService;
+
 /**
  *
  * @author selwa.elfirdoussi
@@ -15,7 +18,15 @@ public class CoursInfo2023 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Client berrada = new Client();
+        berrada.setNomClient("Berrada");
+        berrada.setPrenomClient("youssef");
+        berrada.setSalaire(20000);
+        
+        int idClt = ClientService.createClient(berrada);
+        
+        System.out.println("client crée avec id "+ idClt);
+             
     }
     
 }
