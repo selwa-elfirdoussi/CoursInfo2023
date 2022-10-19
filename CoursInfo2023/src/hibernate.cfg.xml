@@ -7,6 +7,8 @@
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/gestionbanque?zeroDateTimeBehavior=convertToNull</property>
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">12345</property>
+    <property name="hibernate.show_sql">true</property>
     <mapping resource="cours/hibernate/client.hbm.xml"/>
+
   </session-factory>
 </hibernate-configuration>

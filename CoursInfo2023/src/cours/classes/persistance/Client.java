@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cours.classes;
+package cours.classes.persistance;
 
 /**
  *
@@ -17,6 +17,11 @@ public class Client {
   private float salaire;
 
     public Client() {
+    }
+
+    @Override
+    public String toString() {
+        return "Client{" + "idClient=" + idClient + ", nomClient=" + nomClient + ", prenomClient=" + prenomClient + ", salaire=" + salaire + '}';
     }
   
   

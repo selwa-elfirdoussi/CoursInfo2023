@@ -5,8 +5,11 @@
  */
 package coursinfo2023;
 
-import cours.classes.Client;
-import cours.classes.ClientService;
+import cours.classes.persistance.Client;
+import cours.classes.persistance.ClientService;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Scanner;
 
 /**
  *
@@ -18,14 +21,39 @@ public class CoursInfo2023 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Client berrada = new Client();
-        berrada.setNomClient("Berrada");
-        berrada.setPrenomClient("youssef");
-        berrada.setSalaire(20000);
+        /*
+        Client Youssef = new Client();
+        Youssef.setNomClient("Hamid");
+        Youssef.setPrenomClient("Ilham");
+        Youssef.setSalaire(12000);
         
-        int idClt = ClientService.createClient(berrada);
+        int idYoussef = ClientService.createClient(Youssef);
         
-        System.out.println("client crée avec id "+ idClt);
+        System.out.println("client crée avec id = " + idYoussef);
+             
+        List listClient = ClientService.listClient();
+        Iterator it = listClient.iterator();
+        while (it.hasNext()) {
+            Client clt = (Client) it.next();
+            System.out.println("client " + clt);
+        }
+                   */
+       System.out.println("donnez l'identifiant du client que vous voulez augmenter ");
+       Scanner scan = new Scanner(System.in);
+       int id = scan.nextInt();
+       
+       Client clt = ClientService.loadClient(id);
+    
+       System.out.println("client est " + clt);
+       
+       System.out.println("donner le nouveau salaire ");
+       float newSalaire = scan.nextFloat();
+       clt.setSalaire(newSalaire);
+       
+       ClientService.updateClient(clt);
+       
+       ClientService.deleteClient(clt);
+               
              
     }
     
