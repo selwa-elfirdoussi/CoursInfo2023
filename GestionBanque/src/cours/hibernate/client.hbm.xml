@@ -8,5 +8,10 @@
     <property column="nom" name="nomClient"/>
     <property column="prenom" name="prenomClient"/>
     <property column="salaire" name="salaire"/>
+    
+    <set name="comptes" inverse="true" cascade="all">
+        <key column="id" not-null="true" />
+        <one-to-many class="cours.classes.persistance.Compte"/>
+    </set>
   </class>
 </hibernate-mapping>

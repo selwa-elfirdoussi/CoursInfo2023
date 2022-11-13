@@ -5,6 +5,8 @@
  */
 package cours.classes.persistance;
 
+import java.util.Set;
+
 /**
  *
  * @author selwa.elfirdoussi
@@ -15,13 +17,22 @@ public class Client {
   private String nomClient;
   private String prenomClient;
   private float salaire;
+  private Set<Compte> comptes;
 
     public Client() {
     }
 
     @Override
     public String toString() {
-        return "Client{" + "idClient=" + idClient + ", nomClient=" + nomClient + ", prenomClient=" + prenomClient + ", salaire=" + salaire + '}';
+        return "Client{" + nomClient + " "+  prenomClient + "}";
+    }
+
+    public Set<Compte> getComptes() {
+        return comptes;
+    }
+
+    public void setComptes(Set<Compte> comptes) {
+        this.comptes = comptes;
     }
   
   

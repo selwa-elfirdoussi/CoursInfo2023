@@ -16,20 +16,20 @@
         <columns>
           <TableColumn fx:id="cltId" prefWidth="80" text="Identifiant" />
           <TableColumn fx:id="cltName" prefWidth="100" text="Nom" />
-          <TableColumn fx:id="cltFirstName" text="Prénom" onEditCommit="#editFirstNameFromList" />
-          <TableColumn fx:id="cltSalaire" text="Salaire" onEditCommit="#editSalaireFromList"/>
+          <TableColumn fx:id="cltFirstName" onEditCommit="#editFirstNameFromList" text="Prénom" />
+          <TableColumn fx:id="cltSalaire" onEditCommit="#editSalaireFromList" text="Salaire" />
         </columns>
       </TableView>
       <TextField fx:id="name" layoutX="231.0" layoutY="67.0" />
       <TextField fx:id="firstName" layoutX="467.0" layoutY="67.0" />
-      <TextField fx:id="salaire" layoutX="92.0" layoutY="115.0"/>
+      <TextField fx:id="salaire" layoutX="92.0" layoutY="115.0" />
       <DatePicker fx:id="birthDate" layoutX="475.0" layoutY="115.0" prefHeight="25.0" prefWidth="142.0" />
       <Label layoutX="167.0" layoutY="71.0" text="Nom" />
       <Label layoutX="404.0" layoutY="71.0" text="Prénom" />
       <Label layoutX="30.0" layoutY="119.0" text="Salaire" />
       <Label layoutX="359.0" layoutY="119.0" text="Date de naissance" />
       <Button fx:id="saveButtom" layoutX="367.0" layoutY="164.0" mnemonicParsing="false" onAction="#saveClient" text="Enregistrer" />
-      <Button fx:id="closeButtom" layoutX="576.0" layoutY="410.0" mnemonicParsing="false" text="Fermer" onAction="#closeClient"/>
+      <Button fx:id="closeButtom" layoutX="576.0" layoutY="410.0" mnemonicParsing="false" onAction="#closeClient" text="Fermer" />
       <Button fx:id="clearButtom" layoutX="475.0" layoutY="164.0" mnemonicParsing="false" text="Vider" />
       <Label layoutX="241.0" layoutY="28.0" text="Gestion des clients de la banque" textFill="#e40606">
          <font>
@@ -37,6 +37,7 @@
          </font>
       </Label>
       <ComboBox fx:id="civilite" layoutX="74.0" layoutY="67.0" prefHeight="25.0" prefWidth="74.0" />
-      <Button layoutX="550.0" layoutY="164.0" mnemonicParsing="false" text="Supprimer" onAction="#deleteClient"/>
+      <Button layoutX="550.0" layoutY="164.0" mnemonicParsing="false" onAction="#deleteClient" text="Supprimer" />
+      <Button layoutX="333.0" layoutY="410.0" mnemonicParsing="false" onAction="#AddAccount" text="Ajouter un compte" />
    </children>
 </AnchorPane>

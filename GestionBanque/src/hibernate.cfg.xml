@@ -8,7 +8,7 @@
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">12345</property>
     <property name="hibernate.show_sql">true</property>
+    <mapping resource="cours/hibernate/compte.hbm.xml"/>
     <mapping resource="cours/hibernate/client.hbm.xml"/>
-
   </session-factory>
 </hibernate-configuration>
